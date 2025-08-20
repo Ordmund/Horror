@@ -1,17 +1,14 @@
 using System;
+using UnityEngine;
 
 namespace Notifiers
 {
     public interface IInputNotifier
     {
-        event Action ForwardIsPressed;
-        event Action BackwardIsPressed;
-        event Action LeftIsPressed;
-        event Action RightIsPressed;
+        event Action<Vector2> MouseIsMoved;
+        event Action<Vector2> MoveIsPressed;
 
-        void NotifyForwardIsPressed();
-        void NotifyBackwardIsPressed();
-        void NotifyLeftIsPressed();
-        void NotifyRightIsPressed();
+        void NotifyMouseIsMoved(Vector2 direction);
+        void NotifyMoveIsPressed(Vector2 direction);
     }
 }

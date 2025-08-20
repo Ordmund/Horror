@@ -1,14 +1,17 @@
 using Characters.Player;
+using Core.MVC;
 
 namespace World
 {
     public class WorldBuilder : IWorldBuilder
     {
-        private readonly PlayerController.Factory _playerControllerFactory;
+        private readonly IMVCFactory _mvcFactory;
+        //private readonly PlayerController.Factory _playerControllerFactory;
 
-        public WorldBuilder(PlayerController.Factory playerControllerFactory)
+        public WorldBuilder(IMVCFactory mvcFactory)
         {
-            _playerControllerFactory = playerControllerFactory;
+            _mvcFactory = mvcFactory;
+            //_playerControllerFactory = playerControllerFactory;
         }
         
         public void BuildWorld()
@@ -18,7 +21,8 @@ namespace World
 
         private void BuildCharacter()
         {
-            _playerControllerFactory.Create();
+            var player = _mvcFactory.InstantiateAndBind<PlayerController, PlayerView, PlayerModel>("Player/Player");
+            //_playerControllerFactory.Create();
         }
     }
 }

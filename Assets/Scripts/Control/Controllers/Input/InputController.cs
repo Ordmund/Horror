@@ -2,6 +2,7 @@ using Core.Controllers;
 using Core.Managers.Injectable;
 using Notifiers;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Controllers.InputControllers
 {
@@ -9,6 +10,9 @@ namespace Controllers.InputControllers
     {
         private readonly IUnityCallbacksBehaviour _unityCallbacksBehaviour;
         private readonly IInputNotifier _inputNotifier;
+
+        private InputAction _lookAction;
+        private InputAction _moveAction;
 
         public InputController(IUnityCallbacksBehaviour unityCallbacksBehaviour, IInputNotifier inputNotifier)
         {
@@ -21,6 +25,7 @@ namespace Controllers.InputControllers
             base.Initialize();
 
             SubscribeOnUpdate();
+            FindInputActions();
         }
 
         public override void Dispose()
@@ -32,34 +37,34 @@ namespace Controllers.InputControllers
 
         private void SubscribeOnUpdate()
         {
-            _unityCallbacksBehaviour.OnUpdate += OnUpdate;
+            _unityCallbacksBehaviour.OnFixedUpdate += OnFixedUpdate;
         }
 
         private void UnsubscribeFromUpdate()
         {
-            _unityCallbacksBehaviour.OnUpdate -= OnUpdate;
+            _unityCallbacksBehaviour.OnFixedUpdate -= OnFixedUpdate;
         }
 
-        private void OnUpdate()
+        private void FindInputActions()
         {
-            if (Input.GetKey(KeyCode.W))
+            _lookAction = InputSystem.actions.FindAction("Look");
+            _moveAction = InputSystem.actions.FindAction("Move");
+        }
+
+        private void OnFixedUpdate()
+        {
+            if (_moveAction.IsPressed())
             {
-                _inputNotifier.NotifyForwardIsPressed();
+                var direction = _moveAction.ReadValue<Vector2>();
+                
+                _inputNotifier.NotifyMoveIsPressed(direction);
             }
-            
-            if (Input.GetKey(KeyCode.D))
+
+            if (_lookAction.IsPressed())
             {
-                _inputNotifier.NotifyRightIsPressed();
-            }
-            
-            if (Input.GetKey(KeyCode.A))
-            {
-                _inputNotifier.NotifyLeftIsPressed();
-            }
-            
-            if (Input.GetKey(KeyCode.S))
-            {
-                _inputNotifier.NotifyBackwardIsPressed();
+                var direction = _lookAction.ReadValue<Vector2>();
+                
+                _inputNotifier.NotifyMouseIsMoved(direction);
             }
         }
     }
