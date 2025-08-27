@@ -5,13 +5,11 @@ namespace World
 {
     public class WorldBuilder : IWorldBuilder
     {
-        private readonly IMVCFactory _mvcFactory;
-        //private readonly PlayerController.Factory _playerControllerFactory;
+        private readonly IGameObjectMVCFactory _gameObjectMvcFactory;
 
-        public WorldBuilder(IMVCFactory mvcFactory)
+        public WorldBuilder(IGameObjectMVCFactory gameObjectMvcFactory)
         {
-            _mvcFactory = mvcFactory;
-            //_playerControllerFactory = playerControllerFactory;
+            _gameObjectMvcFactory = gameObjectMvcFactory;
         }
         
         public void BuildWorld()
@@ -21,8 +19,8 @@ namespace World
 
         private void BuildCharacter()
         {
-            var player = _mvcFactory.InstantiateAndBind<PlayerController, PlayerView, PlayerModel>("Player/Player");
-            //_playerControllerFactory.Create();
+            //TODO actually I dont need nere a player controller, it's enough only to instantiate?
+            var playerController = _gameObjectMvcFactory.InstantiateAndBind<PlayerController, PlayerView, PlayerModel>("Player/Player");
         }
     }
 }
