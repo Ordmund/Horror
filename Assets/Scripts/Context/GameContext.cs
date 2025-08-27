@@ -1,4 +1,6 @@
 using System;
+using ColoredLogger;
+using Constants.Logs;
 using Controllers.InputControllers;
 using World;
 using Zenject;
@@ -20,6 +22,8 @@ namespace Context
 
         public void Initialize()
         {
+            Logs.Initialize<LogChannel>();
+            
             _inputController = _inputControllerFactory.Create();
 
             _worldBuilder.BuildWorld();
