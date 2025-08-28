@@ -1,6 +1,5 @@
 using Characters.Player;
 using Core.MVC;
-using Providers;
 
 namespace World
 {
