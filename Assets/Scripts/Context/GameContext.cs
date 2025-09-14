@@ -2,6 +2,7 @@ using System;
 using ColoredLogger;
 using Constants.Logs;
 using Controllers.InputControllers;
+using Core.Dependencies;
 using World;
 using Zenject;
 
@@ -11,7 +12,7 @@ namespace Context
     {
         private readonly IFactory<InputController> _inputControllerFactory;
         private readonly IWorldBuilder _worldBuilder;
-        
+
         private InputController _inputController;
 
         public GameContext(IFactory<InputController> inputControllerFactory, IWorldBuilder worldBuilder)
@@ -23,7 +24,9 @@ namespace Context
         public void Initialize()
         {
             Logs.Initialize<LogChannel>();
-            
+
+            DependenciesProvider.PathHandlerPath = "ScriptableObjects/PathHandler";
+
             _inputController = _inputControllerFactory.Create();
 
             _worldBuilder.BuildWorld();

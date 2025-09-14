@@ -5,23 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6045fdc4-74a1-40f0-94b7-3c64924a52f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/IPrefabPathProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/IPrefabPathProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPathsScriptableObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPathsScriptableObject.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Horror Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Horror Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Core/Installers/CoreInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Installers/CoreInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Providers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Providers/PathProviders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Providers/PathProviders/IPrefabPathProvider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Providers/PathProviders/IPrefabPathProvider.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Providers/PathProviders/PrefabPathProvider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Providers/PathProviders/PrefabPathProvider.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Providers/PathProviders/PrefabsPathsScriptableObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Providers/PathProviders/PrefabsPathsScriptableObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPathsScriptableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPaths.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPathsScriptableObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPaths.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Managers/Static/ScriptableObjects/ScriptableObjectsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Managers/Static/ScriptableObjects/ScriptableObjectsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/Installers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/Installers/PlayerInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/Installers/PlayerInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Context/GameContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Context/GameContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Context/Installers/GameContextInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Context/Installers/GameContextInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/World/Builders/WorldBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World/Builders/WorldBuilder.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +27,7 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Assets/Core" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -53,19 +47,34 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35be019606484cd09ebec4168af849f92400/a8/52698280/LogType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35be019606484cd09ebec4168af849f92400/c7/d1192037/LogProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35be019606484cd09ebec4168af849f92400/cf/0467b9d3/LogColor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/19/7897bb86/IEnumerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/bf/056add9c/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6460d52f11fa4eaeabfca1cf2e9eca8f46ae00/35/b3600b37/Stack`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6460d52f11fa4eaeabfca1cf2e9eca8f46ae00/4b/9674e142/Queue`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/0e/d6edd60d/Resources.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/24/914ae329/LogType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/ba/4530a427/Debug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Core/Installers/CoreInstaller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Core/Installers/CoreInstaller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/Components/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/GameObjectMVCFactory.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/IGameObjectMVCFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/IGameObjectMVCFactory.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/IPrefabPathProvider.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPaths.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Core/Managers/Injectable/TaskScheduler/TaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Core/Managers/Injectable/TaskScheduler/Tasks/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Core/Managers/Static/ScriptableObjects/ScriptableObjectsManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Player.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants/Logs/LogChannel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Providers/PathProviders/PrefabPathProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Context/Installers/GameContextInstaller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Builders.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ThirdParty.meta" root0="FORCE_HIGHLIGHTING" />
@@ -142,13 +151,15 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17824">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="17824" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -178,7 +189,8 @@
       <workItem from="1755951921763" duration="141000" />
       <workItem from="1756278844852" duration="12642000" />
       <workItem from="1756298324175" duration="1426000" />
-      <workItem from="1756376147292" duration="253000" />
+      <workItem from="1756376147292" duration="679000" />
+      <workItem from="1757860327548" duration="7998000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <option name="closed" value="true" />
@@ -276,7 +288,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756299220997</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Moved PathProvider logic to Core submodule.">
+      <option name="closed" value="true" />
+      <created>1756376431273</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1756376431273</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed TaskScheduler ignores DelayTask delay.">
+      <option name="closed" value="true" />
+      <created>1757867279602</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1757867279602</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +355,9 @@
     <MESSAGE value="Removed empty folder." />
     <MESSAGE value="Renamed main scene. Removed unused code." />
     <MESSAGE value="Added PrefabPath provider." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added PrefabPath provider." />
+    <MESSAGE value="Moved PathProvider logic to Core submodule." />
+    <MESSAGE value="Fixed TaskScheduler ignores DelayTask delay." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed TaskScheduler ignores DelayTask delay." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

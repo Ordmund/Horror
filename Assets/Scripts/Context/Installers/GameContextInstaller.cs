@@ -1,4 +1,3 @@
-using Characters.Player;
 using Installers;
 using World;
 using Zenject;
@@ -23,7 +22,6 @@ namespace Context
         {
             InputInstaller.Install(Container);
             WorldInstaller.Install(Container);
-            PlayerInstaller.Install(Container);
         }
     }
 }
