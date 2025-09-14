@@ -1,5 +1,4 @@
 using Installers;
-using World;
 using Zenject;
 
 namespace Context
@@ -21,7 +20,6 @@ namespace Context
         private void InstallGameInstallers()
         {
             InputInstaller.Install(Container);
-            WorldInstaller.Install(Container);
         }
     }
 }
