@@ -1,3 +1,4 @@
+using GameStates;
 using Installers;
 using Zenject;
 
@@ -19,6 +20,7 @@ namespace Context
 
         private void InstallGameInstallers()
         {
+            GameStateInstaller.Install(Container);
             InputInstaller.Install(Container);
         }
     }

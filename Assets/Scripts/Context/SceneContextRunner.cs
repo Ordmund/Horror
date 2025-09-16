@@ -5,13 +5,13 @@ namespace Context
 {
     public class SceneContextRunner : MonoBehaviour
     {
-        [SerializeField] private SceneContext _sceneContext;
+        [SerializeField] private SceneContext sceneContext;
         
         private void Start()
         {
             SubmodulesDependenciesInitialization.Initialize();
             
-            _sceneContext.Run();
+            sceneContext.Run();
         }
     }
 }

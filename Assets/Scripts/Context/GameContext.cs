@@ -1,46 +1,30 @@
 using System;
-using Characters.Player;
-using ColoredLogger;
-using Constants.Logs;
 using Controllers.InputControllers;
-using Core.Dependencies;
-using Core.Managers.Injectable;
-using Core.MVC;
+using GameStates;
 using Zenject;
 
 namespace Context
 {
     public class GameContext : IGameContext, IInitializable, IDisposable
     {
+        private readonly IGameStateMachine _gameStateMachine;
         private readonly IFactory<InputController> _inputControllerFactory;
-        private readonly IGameObjectMVCFactory _gameObjectMvcFactory;
-        private readonly ITaskScheduler _taskScheduler;
 
         private InputController _inputController;
 
-        public GameContext(IFactory<InputController> inputControllerFactory, IGameObjectMVCFactory gameObjectMvcFactory, ITaskScheduler taskScheduler)
+        public GameContext(IGameStateMachine gameStateMachine, IFactory<InputController> inputControllerFactory)
         {
+            _gameStateMachine = gameStateMachine;
             _inputControllerFactory = inputControllerFactory;
-            _gameObjectMvcFactory = gameObjectMvcFactory;
-            _taskScheduler = taskScheduler;
         }
 
         public void Initialize()
         {
-            Logs.Initialize<LogChannel>();
-
-            DependenciesProvider.PathHandlerPath = "ScriptableObjects/PathHandler";
-
             _inputController = _inputControllerFactory.Create();
-
-            _taskScheduler.Run(new ActionTask(LoadCharacter)); //TODO why gamecontext? Context -> Menu -> LoadWorld -> LoadCharacter.
+            
+            _gameStateMachine.ChangeState(GameState.Loading);
         }
         
-        private void LoadCharacter()
-        {
-            var playerController = _gameObjectMvcFactory.InstantiateAndBind<PlayerController, PlayerView, PlayerModel>(); //TODO where to store? (somewhere, where it will be disposed)
-        }
-
         public void Dispose()
         {
             _inputController?.Dispose();
