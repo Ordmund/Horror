@@ -1,19 +1,18 @@
 using System;
-using Core.Managers.Injectable;
+using Core.Managers;
+using Zenject;
 
 namespace GameStates
 {
     public class GameStateMachine : IGameStateMachine
     {
-        private readonly ITaskScheduler _taskScheduler;
-        private readonly ITaskFactory _taskFactory;
+        private readonly IFactory<LoadingTask> _loadingTaskFactory;
 
         public event Action<GameState> OnGameStateChanged;
-        
-        public GameStateMachine(ITaskScheduler taskScheduler, ITaskFactory taskFactory)
+
+        public GameStateMachine(IFactory<LoadingTask> loadingTaskFactory)
         {
-            _taskScheduler = taskScheduler;
-            _taskFactory = taskFactory;
+            _loadingTaskFactory = loadingTaskFactory;
         }
         
         public GameState CurrentState { get; private set; }
@@ -33,9 +32,7 @@ namespace GameStates
                     //TODO Main menu state
                 
                 case GameState.Loading:
-                    var loadingTask = _taskFactory.InstantiateAndBind<LoadingTask>();
-                    
-                   _taskScheduler.Run(loadingTask); 
+                    SwitchToLoadingState();
                     break;
                 
                 case GameState.Game:
@@ -44,6 +41,13 @@ namespace GameStates
             }
             
             OnGameStateChanged?.Invoke(CurrentState);
+        }
+
+        private void SwitchToLoadingState()
+        {
+            var loadingTask = _loadingTaskFactory.Create();
+
+            loadingTask.Execute().Forget(); //TODO still need onComplete method
         }
     }
 }

@@ -1,43 +1,40 @@
-using System.Collections;
-using Core.Managers.Injectable;
-using Loading.Tasks;
+using System.Threading.Tasks;
+using Core.Tasks;
+using Player;
+using World;
+using Zenject;
 
 namespace GameStates
 {
-    public class LoadingTask : Task
+    public class LoadingTask : AsyncTask
     {
-        private readonly ITaskScheduler _taskScheduler;
-        private readonly ITaskFactory _taskFactory;
+        private readonly IFactory<WorldLoadingTask> _worldLoadingTaskFactory;
+        private readonly IFactory<PlayerLoadingTask> _playerLoadingTaskFactory;
 
-        private bool _isCompeted;
-
-        public LoadingTask(ITaskScheduler taskScheduler, ITaskFactory taskFactory)
+        public LoadingTask(IFactory<WorldLoadingTask> worldLoadingTaskFactory, IFactory<PlayerLoadingTask> playerLoadingTaskFactory)
         {
-            _taskScheduler = taskScheduler;
-            _taskFactory = taskFactory;
+            _worldLoadingTaskFactory = worldLoadingTaskFactory;
+            _playerLoadingTaskFactory = playerLoadingTaskFactory;
         }
 
-        public override IEnumerator Execute()
+        public override async Task Execute()
         {
-            Load();
-
-            while (!_isCompeted)
-            {
-                yield return new WaitForNextFrame();
-            }
+            await LoadWorld();
+            await LoadPlayer();
         }
 
-        private void Load()
+        private async Task LoadWorld()
         {
-            var playerLoadingTask = _taskFactory.InstantiateAndBind<PlayerLoadingTask>();
-            playerLoadingTask.OnComplete(OnPlayerLoadingCompleted);
+            var worldLoadingTask = _worldLoadingTaskFactory.Create();
             
-            _taskScheduler.Run(playerLoadingTask);
+            await worldLoadingTask.Execute();
         }
 
-        private void OnPlayerLoadingCompleted()
+        private async Task LoadPlayer()
         {
-            _isCompeted = true;
+            var playerLoadingTask = _playerLoadingTaskFactory.Create();
+            
+            await playerLoadingTask.Execute();
         }
     }
 }

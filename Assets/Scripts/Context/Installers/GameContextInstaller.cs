@@ -1,5 +1,7 @@
+using GameInput;
 using GameStates;
-using Installers;
+using Player;
+using World;
 using Zenject;
 
 namespace Context
@@ -22,6 +24,8 @@ namespace Context
         {
             GameStateInstaller.Install(Container);
             InputInstaller.Install(Container);
+            WorldInstaller.Install(Container);
+            PlayerInstaller.Install(Container);
         }
     }
 }

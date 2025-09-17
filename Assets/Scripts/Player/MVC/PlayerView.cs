@@ -1,6 +1,6 @@
 using Core.MVC;
 
-namespace Characters.Player
+namespace Player
 {
     public class PlayerView : BaseView
     {

@@ -1,10 +1,9 @@
 using Core.Controllers;
 using Core.Managers.Injectable;
-using Notifiers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Controllers.InputControllers
+namespace GameInput
 {
     public class InputController : ControllerBase
     {

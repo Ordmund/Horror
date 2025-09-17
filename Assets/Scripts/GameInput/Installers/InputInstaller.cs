@@ -1,14 +1,12 @@
-using Controllers.InputControllers;
-using Notifiers;
 using Zenject;
 
-namespace Installers
+namespace GameInput
 {
     public class InputInstaller : Installer<InputInstaller>
     {
         public override void InstallBindings()
         {
-            Container.BindIFactory<InputController>();
+            Container.BindIFactory<InputController>().AsSingle();
             
             Container.Bind<IInputNotifier>().To<InputNotifier>().AsSingle();
         }

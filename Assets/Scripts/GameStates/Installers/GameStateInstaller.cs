@@ -7,6 +7,8 @@ namespace GameStates
         public override void InstallBindings()
         {
             Container.Bind<IGameStateMachine>().To<GameStateMachine>().AsSingle();
+            
+            Container.BindIFactory<LoadingTask>().AsSingle();
         }
     }
 }

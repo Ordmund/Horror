@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Notifiers
+namespace GameInput
 {
     public class InputNotifier : IInputNotifier
     {

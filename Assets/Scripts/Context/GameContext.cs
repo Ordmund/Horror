@@ -1,5 +1,5 @@
 using System;
-using Controllers.InputControllers;
+using GameInput;
 using GameStates;
 using Zenject;
 
