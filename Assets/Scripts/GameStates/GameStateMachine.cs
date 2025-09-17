@@ -32,22 +32,32 @@ namespace GameStates
                     //TODO Main menu state
                 
                 case GameState.Loading:
-                    SwitchToLoadingState();
+                    RunLoadingState();
                     break;
                 
                 case GameState.Game:
-                    throw new NotImplementedException();
-                    //TODO Gameplay state
+                    RunGameState();
+                    break;
             }
             
             OnGameStateChanged?.Invoke(CurrentState);
         }
 
-        private void SwitchToLoadingState()
+        private void RunLoadingState()
         {
             var loadingTask = _loadingTaskFactory.Create();
 
-            loadingTask.Execute().Forget(); //TODO still need onComplete method
+            loadingTask.Execute().OnComplete(SwitchToGameState).Forget();
+        }
+
+        private void RunGameState()
+        {
+            //TODO Gameplay state
+        }
+
+        private void SwitchToGameState()
+        {
+            ChangeState(GameState.Game);
         }
     }
 }
