@@ -47,7 +47,7 @@ namespace GameStates
         {
             var loadingTask = _loadingTaskFactory.Create();
 
-            loadingTask.Execute().OnComplete(SwitchToGameState).Forget();
+            loadingTask.OnComplete(SwitchToGameState).RunAndForget();
         }
 
         private void RunGameState()

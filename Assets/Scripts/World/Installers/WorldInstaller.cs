@@ -6,7 +6,7 @@ namespace World
     {
         public override void InstallBindings()
         {
-            Container.BindIFactory<WorldLoadingTask>().AsSingle();
+            Container.BindIFactory<LoadWorldTask>().AsSingle();
         }
     }
 }

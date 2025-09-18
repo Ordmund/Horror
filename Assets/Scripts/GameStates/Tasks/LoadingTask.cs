@@ -8,19 +8,18 @@ namespace GameStates
 {
     public class LoadingTask : AsyncTask
     {
-        private readonly IFactory<WorldLoadingTask> _worldLoadingTaskFactory;
-        private readonly IFactory<PlayerLoadingTask> _playerLoadingTaskFactory;
+        private readonly IFactory<LoadWorldTask> _worldLoadingTaskFactory;
+        private readonly IFactory<LoadPlayerTask> _playerLoadingTaskFactory;
 
-        public LoadingTask(IFactory<WorldLoadingTask> worldLoadingTaskFactory, IFactory<PlayerLoadingTask> playerLoadingTaskFactory)
+        public LoadingTask(IFactory<LoadWorldTask> worldLoadingTaskFactory, IFactory<LoadPlayerTask> playerLoadingTaskFactory)
         {
             _worldLoadingTaskFactory = worldLoadingTaskFactory;
             _playerLoadingTaskFactory = playerLoadingTaskFactory;
         }
 
-        public override async Task Execute()
+        public override Task Execute()
         {
-            await LoadWorld();
-            await LoadPlayer();
+            return Task.WhenAll(LoadWorld(), LoadPlayer());
         }
 
         private async Task LoadWorld()

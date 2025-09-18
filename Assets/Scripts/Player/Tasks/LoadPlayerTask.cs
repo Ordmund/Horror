@@ -4,18 +4,18 @@ using Core.Tasks;
 
 namespace Player
 {
-    public class PlayerLoadingTask : AsyncTask
+    public class LoadPlayerTask : AsyncTask
     {
         private readonly IGameObjectMVCFactory _gameObjectMvcFactory;
         
-        public PlayerLoadingTask(IGameObjectMVCFactory gameObjectMvcFactory)
+        public LoadPlayerTask(IGameObjectMVCFactory gameObjectMvcFactory)
         {
             _gameObjectMvcFactory = gameObjectMvcFactory;
         }
-        
-        public override async Task Execute()
+
+        public override Task Execute()
         {
-            await Load();
+            return Load();
         }
         
         private async Task Load()

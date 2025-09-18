@@ -6,7 +6,7 @@ namespace Player
     {
         public override void InstallBindings()
         {
-            Container.BindIFactory<PlayerLoadingTask>().AsSingle();
+            Container.BindIFactory<LoadPlayerTask>().AsSingle();
         }
     }
 }
