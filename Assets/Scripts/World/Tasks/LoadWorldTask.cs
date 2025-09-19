@@ -1,8 +1,7 @@
 using System.Threading.Tasks;
-using Core.Managers;
+using Constants;
 using Core.Tasks;
-using UnityEngine;
-using Object = UnityEngine.Object;
+using UnityEngine.AddressableAssets;
 
 namespace World
 {
@@ -17,10 +16,11 @@ namespace World
 
         private async Task Instantiate()
         {
-            var prefab = ResourcesManager.Load<GameObject>("World/World"); //TODO get somewhere path. Should I handle view loading from controller?
+            var instantiateAssetTask = Addressables.InstantiateAsync(AddressablesPaths.WorldPrefab);
 
-            var loadingTask = Object.InstantiateAsync(prefab); //TODO where to store the game object? Subscribe on state change to delete?
-            var world = await loadingTask;
+            await instantiateAssetTask.Task;
+
+            var world = instantiateAssetTask.Result;
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Constants;
 using Core.MVC;
 using Core.Tasks;
 
@@ -20,7 +21,7 @@ namespace Player
         
         private async Task Load()
         {
-            var playerController = await _gameObjectMvcFactory.InstantiateAndBindAsync<PlayerController, PlayerView, PlayerModel>(); //TODO need to unload on state change
+            var playerController = await _gameObjectMvcFactory.InstantiateAndBindAsync<PlayerController, PlayerView, PlayerModel>(AddressablesPaths.PlayerPrefab);
         }
     }
 }

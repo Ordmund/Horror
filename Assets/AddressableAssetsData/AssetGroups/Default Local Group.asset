@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Default Local Group
+  m_GUID: 687effb1a9aeb4247a246d8c63e10aa2
+  m_SerializeEntries:
+  - m_GUID: 3994e41bd8d2bde48801ca42e4b7f944
+    m_Address: Assets/Addressables/World/World.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - World
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 711df820edda13842b8d0b52fd0ebbbd
+    m_Address: Assets/Addressables/Player/Player.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Characters
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 21b7ba62e4505c24fb0216886b655a23, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 80b7a0ec1ee210b49805cb84e54b7372, type: 2}
+    - {fileID: 11400000, guid: 8cd5f7a1e0024d6408a9a9992b44cfec, type: 2}

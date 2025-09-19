@@ -5,15 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6045fdc4-74a1-40f0-94b7-3c64924a52f2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/Addressables.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/Addressables/AddressablesPaths.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/Addressables/AddressablesPaths.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Horror Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Horror Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameStates/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameStates/GameStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameStates/Tasks/LoadingTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameStates/Tasks/LoadingTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Installers/PlayerInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Installers/PlayerInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Tasks/PlayerLoadingTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Tasks/LoadPlayerTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Tasks/PlayerLoadingTask.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Tasks/LoadPlayerTask.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World/Installers/WorldInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World/Installers/WorldInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World/Tasks/WorldLoadingTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World/Tasks/LoadWorldTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World/Tasks/WorldLoadingTask.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World/Tasks/LoadWorldTask.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Installers/CoreInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Installers/CoreInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/MVC/GameObjectMVCFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/MVC/GameObjectMVCFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/MVC/IGameObjectMVCFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/MVC/IGameObjectMVCFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/IPrefabPathProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/IPrefabsPathProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/IPrefabPathProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/IPrefabsPathProvider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPathProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPathProvider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Managers/Static/ScriptableObjects/PathHandler/ScriptableObjectsPathHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Managers/Static/ScriptableObjects/PathHandler/ScriptableObjectsPathHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/PrefabsPaths/PrefabsPaths.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/PrefabsPaths/PrefabsPaths.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/World.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/World/World.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/World/World.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Tasks/LoadPlayerTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Tasks/LoadPlayerTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World/Tasks/LoadWorldTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World/Tasks/LoadWorldTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/URP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/URP.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +54,7 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Assets/Core" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -59,35 +89,32 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6460d52f11fa4eaeabfca1cf2e9eca8f46ae00/35/b3600b37/Stack`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6460d52f11fa4eaeabfca1cf2e9eca8f46ae00/4b/9674e142/Queue`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6460d52f11fa4eaeabfca1cf2e9eca8f46ae00/72/8ca32bb9/Task.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/0e/d6edd60d/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/0e/d6edd60d/Resources.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/24/914ae329/LogType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/8c/3fbe4d67/ResourceRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/ba/4530a427/Debug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/bd/411eb26f/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9384495d2a482ac7341d67ca84e16d267d16c62458a9d67a92b119199a9/System.Threading.Tasks.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetGroupSortSettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/Components/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/GameObjectMVCFactory.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/IGameObjectMVCFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/IGameObjectMVCFactory.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/IPrefabPathProvider.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabPathProvider.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/IPrefabsPathProvider.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPathProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPathProvider.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPaths.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/Managers/Static/Tasks.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/Managers/Static/Tasks/TaskExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Core/Managers/Static/Tasks/TaskExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/Managers/Static/Tasks/TaskExtensions.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Core/Tasks/AsyncTask.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/Tasks/AsyncTask.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/Tasks/AsyncTask.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Player.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/World.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Addressables/Constants/AddressablesPaths.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants/Logs/LogChannel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Constants/Logs/LogChannel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Constants/Logs/LogChannel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/SceneContextRunner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/SceneContextRunner.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/SubmodulesDependenciesInitialization.cs" root0="FORCE_HIGHLIGHTING" />
@@ -101,7 +128,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/Constants/GameState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/Constants/GameState.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/GameStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/GameStates/GameStateMachine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/GameStateMachine.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/IGameStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/IGameStateMachine.cs.meta" root0="FORCE_HIGHLIGHTING" />
@@ -110,18 +136,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/Installers/GameStateInstaller.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/Tasks.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/Tasks/LoadingTask.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/GameStates/Tasks/LoadingTask.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/Tasks/LoadingTask.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Installers.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Player/Installers/PlayerInstaller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Installers/PlayerInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Player/Installers/PlayerInstaller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Tasks/LoadPlayerTask.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Installers/WorldInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/World/Installers/WorldInstaller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Tasks/LoadWorldTask.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Tasks/LoadWorldTask.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ThirdParty.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@0960051b8c8a/Runtime/Addressables.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@0960051b8c8a/Runtime/ResourceManager/AsyncOperations/AsyncOperationHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@6aff1dd08a0c/Editor/BurstInspectorGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@978211393e28/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@978211393e28/InputSystem/InputSystem.cs" root0="SKIP_HIGHLIGHTING" />
@@ -242,7 +267,9 @@
       <workItem from="1758124872135" duration="2198000" />
       <workItem from="1758169589948" duration="7099000" />
       <workItem from="1758193131974" duration="4411000" />
-      <workItem from="1758204692859" duration="670000" />
+      <workItem from="1758204692859" duration="3857000" />
+      <workItem from="1758278986065" duration="257000" />
+      <workItem from="1758280211952" duration="2683000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <option name="closed" value="true" />
@@ -460,7 +487,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758205287526</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Fixed Tasks execution before it runs through try/catch block in TasksExtensions. Minor refactoring.">
+      <option name="closed" value="true" />
+      <created>1758205412283</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1758205412283</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +534,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Version update." />
     <MESSAGE value="Added Zenject to project." />
     <MESSAGE value="Added Game Context, Input Controller, World Builder." />
     <MESSAGE value="Added FixedUpdate method to UnityCallbacks." />
@@ -524,7 +558,8 @@
     <MESSAGE value="Added OnComplete and OnAbort methods to TaskExtensions." />
     <MESSAGE value="Added switch to Game state after completing Loading state." />
     <MESSAGE value="Moved  Task events subscription and calling to AsyncTask." />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved  Task events subscription and calling to AsyncTask." />
+    <MESSAGE value="Fixed Tasks execution before it runs through try/catch block in TasksExtensions. Minor refactoring." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Tasks execution before it runs through try/catch block in TasksExtensions. Minor refactoring." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
