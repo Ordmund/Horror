@@ -63,7 +63,7 @@ namespace GameInput
             {
                 var direction = _lookAction.ReadValue<Vector2>();
                 
-                _inputNotifier.NotifyMouseIsMoved(direction);
+                _inputNotifier.NotifyLookIsInteracted(direction);
             }
         }
     }

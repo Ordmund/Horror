@@ -17,5 +17,7 @@ MonoBehaviour:
   paths:
   - name: PathHandler
     path: ScriptableObjects/PathHandler
+  - name: PlayerSettings
+    path: ScriptableObjects/Player/PlayerSettings
   - name: PrefabsPaths
     path: ScriptableObjects/PrefabsPaths/PrefabsPaths
