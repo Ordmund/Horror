@@ -7,15 +7,15 @@ namespace GameInput
 {
     public class InputController : ControllerBase
     {
-        private readonly IUnityCallbacksBehaviour _unityCallbacksBehaviour;
+        private readonly ITickManager _tickManager;
         private readonly IInputNotifier _inputNotifier;
 
         private InputAction _lookAction;
         private InputAction _moveAction;
 
-        public InputController(IUnityCallbacksBehaviour unityCallbacksBehaviour, IInputNotifier inputNotifier)
+        public InputController(ITickManager tickManager, IInputNotifier inputNotifier)
         {
-            _unityCallbacksBehaviour = unityCallbacksBehaviour;
+            _tickManager = tickManager;
             _inputNotifier = inputNotifier;
         }
 
@@ -36,12 +36,12 @@ namespace GameInput
 
         private void SubscribeOnUpdate()
         {
-            _unityCallbacksBehaviour.OnFixedUpdate += OnFixedUpdate;
+            _tickManager.SubscribeOnTick(CheckActionIsPressed);
         }
 
         private void UnsubscribeFromUpdate()
         {
-            _unityCallbacksBehaviour.OnFixedUpdate -= OnFixedUpdate;
+            _tickManager.UnsubscribeFromTick(CheckActionIsPressed);
         }
 
         private void FindInputActions()
@@ -50,7 +50,7 @@ namespace GameInput
             _moveAction = InputSystem.actions.FindAction("Move");
         }
 
-        private void OnFixedUpdate()
+        private void CheckActionIsPressed()
         {
             if (_moveAction.IsPressed())
             {
