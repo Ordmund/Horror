@@ -7,15 +7,15 @@ namespace GameInput
 {
     public class InputController : ControllerBase
     {
-        private readonly ITickManager _tickManager;
+        private readonly ITickNotifier _tickNotifier;
         private readonly IInputNotifier _inputNotifier;
 
         private InputAction _lookAction;
         private InputAction _moveAction;
 
-        public InputController(ITickManager tickManager, IInputNotifier inputNotifier)
+        public InputController(ITickNotifier tickNotifier, IInputNotifier inputNotifier)
         {
-            _tickManager = tickManager;
+            _tickNotifier = tickNotifier;
             _inputNotifier = inputNotifier;
         }
 
@@ -36,12 +36,12 @@ namespace GameInput
 
         private void SubscribeOnUpdate()
         {
-            _tickManager.SubscribeOnTick(CheckActionIsPressed);
+            _tickNotifier.SubscribeOnTick(CheckActionIsPressed);
         }
 
         private void UnsubscribeFromUpdate()
         {
-            _tickManager.UnsubscribeFromTick(CheckActionIsPressed);
+            _tickNotifier.UnsubscribeFromTick(CheckActionIsPressed);
         }
 
         private void FindInputActions()
