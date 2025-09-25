@@ -7,6 +7,7 @@ namespace Player
         public override void InstallBindings()
         {
             Container.BindIFactory<LoadPlayerTask>().AsSingle();
+            Container.Bind<IPlayerTransformNotifier>().To<PlayerTransformNotifier>().AsSingle();
         }
     }
 }

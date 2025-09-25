@@ -12,8 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d805971ed5ff4388901e44e1daf2b14a, type: 3}
   m_Name: PrefabsPaths
   m_EditorClassIdentifier: Assembly-CSharp::Providers.PrefabsPathsScriptableObject
-  paths:
-  - viewClassName: PlayerView
-    path: Player/Player
-  - viewClassName: PlayerView
-    path: Player/Player
+  paths: []

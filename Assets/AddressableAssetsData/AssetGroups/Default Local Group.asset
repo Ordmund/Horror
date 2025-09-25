@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 687effb1a9aeb4247a246d8c63e10aa2
   m_SerializeEntries:
+  - m_GUID: 255c0d393c078f943ae86d8d3cc9654b
+    m_Address: Assets/Prefabs/Addressables/Cinemachine/FirstPersonCamera.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Camera
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3994e41bd8d2bde48801ca42e4b7f944
     m_Address: Assets/Addressables/World/World.prefab
     m_ReadOnly: 0
@@ -25,7 +31,7 @@ MonoBehaviour:
     m_Address: Assets/Addressables/Player/Player.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Characters
+    - Player
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 21b7ba62e4505c24fb0216886b655a23, type: 2}
