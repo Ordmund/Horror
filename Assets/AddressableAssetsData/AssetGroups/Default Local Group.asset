@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: 687effb1a9aeb4247a246d8c63e10aa2
   m_SerializeEntries:
   - m_GUID: 255c0d393c078f943ae86d8d3cc9654b
-    m_Address: Assets/Prefabs/Addressables/Cinemachine/FirstPersonCamera.prefab
+    m_Address: Assets/Prefabs/Addressables/Camera/FirstPersonCamera.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Camera

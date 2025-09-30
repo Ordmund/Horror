@@ -7,14 +7,17 @@ namespace Player
     {
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private Transform _headTransform;
-
-        public CharacterController GetCharacterController => _characterController;
+        
         public Transform Head => _headTransform;
-        public Quaternion HeadRotation => _headTransform.rotation;
 
         public void SetHeadRotation(Quaternion rotation)
         {
             _headTransform.rotation = rotation;
+        }
+
+        public void Move(Vector3 motion)
+        {
+            _characterController.Move(motion);
         }
     }
 }

@@ -5,16 +5,16 @@ namespace Camera
 {
     public class FirstPersonCameraView : BaseView
     {
-        [SerializeField] private Transform _trackingTarget;
+        [SerializeField] private Transform _cameraTransform;
 
-        public void SetTrackingTargetPosition(Vector3 position)
+        public void SetCameraPosition(Vector3 position)
         {
-            _trackingTarget.position = position;
+            _cameraTransform.position = position;
         }
         
-        public void SetTrackingTargetRotation(Quaternion rotation)
+        public void SetCameraRotation(Quaternion rotation)
         {
-            _trackingTarget.rotation = rotation;
+            _cameraTransform.rotation = rotation;
         }
     }
 }

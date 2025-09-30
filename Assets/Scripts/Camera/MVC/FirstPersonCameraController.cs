@@ -22,26 +22,26 @@ namespace Camera
 
         private void SubscribeOnEvents()
         {
-            _playerTransformNotifier.OnHeadPositionChanged += UpdateTrackingTargetPosition;
-            _playerTransformNotifier.OnHeadRotationChanged += UpdateTrackingTargetRotation;
+            _playerTransformNotifier.OnHeadPositionChanged += UpdateCameraPosition;
+            _playerTransformNotifier.OnHeadRotationChanged += UpdateCameraRotation;
 
         }
 
         private void UnsubscribeFromEvents()
         {
-            _playerTransformNotifier.OnHeadPositionChanged -= UpdateTrackingTargetPosition;
-            _playerTransformNotifier.OnHeadRotationChanged -= UpdateTrackingTargetRotation;
+            _playerTransformNotifier.OnHeadPositionChanged -= UpdateCameraPosition;
+            _playerTransformNotifier.OnHeadRotationChanged -= UpdateCameraRotation;
 
         }
 
-        private void UpdateTrackingTargetPosition(Vector3 position)
+        private void UpdateCameraPosition(Vector3 position)
         {
-            View.SetTrackingTargetPosition(position);
+            View.SetCameraPosition(position);
         }
 
-        private void UpdateTrackingTargetRotation(Quaternion rotation)
+        private void UpdateCameraRotation(Quaternion rotation)
         {
-            View.SetTrackingTargetRotation(rotation);
+            View.SetCameraRotation(rotation);
         }
 
         public void Dispose()

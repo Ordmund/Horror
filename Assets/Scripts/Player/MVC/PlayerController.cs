@@ -28,27 +28,22 @@ namespace Player
             TryLoadModelFromScriptableObject<PlayerSettings>();
             
             SubscribeOnEvents();
+
+            NotifyPlayerSpawnPosition();
         }
 
-        private void SubscribeOnEvents()
+        private void NotifyPlayerSpawnPosition()
         {
-            _tickNotifier.SubscribeOnTick(UpdateCameraDirection);
-            _inputNotifier.LookIsInteracted += OnLookInteracted;
-            _inputNotifier.MoveIsPressed += OnMovePressed;
-        }
-
-        private void UnsubscribeFromEvents()
-        {
-            _tickNotifier.UnsubscribeFromTick(UpdateCameraDirection);
-            _inputNotifier.LookIsInteracted -= OnLookInteracted;
-            _inputNotifier.MoveIsPressed -= OnMovePressed;
+            _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
+            _playerTransformNotifier.NotifyHeadRotationChanged(View.Head.rotation);
         }
 
         private void OnMovePressed(Vector2 direction)
         {
-            var move = View.Head.right * direction.x + View.Head.forward * direction.y;
+            var moveDirection = View.Head.right * direction.x + View.Head.forward * direction.y;
+            var motion = moveDirection * Model.movementSpeed * Time.deltaTime;
             
-            View.GetCharacterController.Move(move * Model.movementSpeed * Time.deltaTime);
+            View.Move(motion);
             
             _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
         }
@@ -66,12 +61,26 @@ namespace Player
             var yaw = Quaternion.AngleAxis(xAngle, Vector3.up);
             var pitch = Quaternion.AngleAxis(yAngle, Vector3.right);
             
-            View.SetHeadRotation(yaw * View.HeadRotation);
-            View.SetHeadRotation(View.HeadRotation * pitch);
+            View.SetHeadRotation(yaw * View.Head.rotation);
+            View.SetHeadRotation(View.Head.rotation * pitch);
             
-            _playerTransformNotifier.NotifyHeadRotationChanged(View.HeadRotation);
+            _playerTransformNotifier.NotifyHeadRotationChanged(View.Head.rotation);
             
             _inputLookDirection = Vector2.zero;
+        }
+        
+        private void SubscribeOnEvents()
+        {
+            _tickNotifier.SubscribeOnTick(UpdateCameraDirection);
+            _inputNotifier.LookIsInteracted += OnLookInteracted;
+            _inputNotifier.MoveIsPressed += OnMovePressed;
+        }
+
+        private void UnsubscribeFromEvents()
+        {
+            _tickNotifier.UnsubscribeFromTick(UpdateCameraDirection);
+            _inputNotifier.LookIsInteracted -= OnLookInteracted;
+            _inputNotifier.MoveIsPressed -= OnMovePressed;
         }
 
         public void Dispose()

@@ -22,7 +22,7 @@ namespace Player
         
         private async Task Load()
         {
-            //var firstPersonCameraController = await _gameObjectMvcFactory.InstantiateAndBindAsync<FirstPersonCameraController, FirstPersonCameraView, FirstPersonCameraModel>(AddressablesPaths.FirstPersonCameraPrefab);
+            var firstPersonCameraController = await _gameObjectMvcFactory.InstantiateAndBindAsync<FirstPersonCameraController, FirstPersonCameraView, FirstPersonCameraModel>(AddressablesPaths.FirstPersonCameraPrefab);
             var playerController = await _gameObjectMvcFactory.InstantiateAndBindAsync<PlayerController, PlayerView, PlayerModel>(AddressablesPaths.PlayerPrefab);
         }
     }
