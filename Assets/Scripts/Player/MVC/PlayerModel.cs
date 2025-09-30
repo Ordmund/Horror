@@ -7,6 +7,6 @@ namespace Player
     public class PlayerModel : BaseModel
     {
         public float cameraSensitivity;
-        public float cameraAngleClamp;
+        public float movementSpeed;
     }
 }

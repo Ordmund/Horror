@@ -34,12 +34,23 @@ namespace Player
         {
             _tickNotifier.SubscribeOnTick(UpdateCameraDirection);
             _inputNotifier.LookIsInteracted += OnLookInteracted;
+            _inputNotifier.MoveIsPressed += OnMovePressed;
         }
 
         private void UnsubscribeFromEvents()
         {
             _tickNotifier.UnsubscribeFromTick(UpdateCameraDirection);
             _inputNotifier.LookIsInteracted -= OnLookInteracted;
+            _inputNotifier.MoveIsPressed -= OnMovePressed;
+        }
+
+        private void OnMovePressed(Vector2 direction)
+        {
+            var move = View.Head.right * direction.x + View.Head.forward * direction.y;
+            
+            View.GetCharacterController.Move(move * Model.movementSpeed * Time.deltaTime);
+            
+            _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
         }
 
         private void OnLookInteracted(Vector2 direction)
@@ -49,8 +60,8 @@ namespace Player
 
         private void UpdateCameraDirection()
         {
-            var xAngle = _inputLookDirection.x * Time.deltaTime * Model.cameraSensitivity;
-            var yAngle = -_inputLookDirection.y * Time.deltaTime * Model.cameraSensitivity;
+            var xAngle = _inputLookDirection.x * Model.cameraSensitivity * Time.deltaTime;
+            var yAngle = -_inputLookDirection.y * Model.cameraSensitivity * Time.deltaTime;
             
             var yaw = Quaternion.AngleAxis(xAngle, Vector3.up);
             var pitch = Quaternion.AngleAxis(yAngle, Vector3.right);
