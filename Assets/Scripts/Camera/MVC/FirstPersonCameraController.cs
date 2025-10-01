@@ -24,14 +24,12 @@ namespace Camera
         {
             _playerTransformNotifier.OnHeadPositionChanged += UpdateCameraPosition;
             _playerTransformNotifier.OnHeadRotationChanged += UpdateCameraRotation;
-
         }
 
         private void UnsubscribeFromEvents()
         {
             _playerTransformNotifier.OnHeadPositionChanged -= UpdateCameraPosition;
             _playerTransformNotifier.OnHeadRotationChanged -= UpdateCameraRotation;
-
         }
 
         private void UpdateCameraPosition(Vector3 position)

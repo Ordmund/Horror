@@ -9,6 +9,7 @@ namespace Player
         [SerializeField] private Transform _headTransform;
         
         public Transform Head => _headTransform;
+        public bool IsGrounded => _characterController.isGrounded;
 
         public void SetHeadRotation(Quaternion rotation)
         {

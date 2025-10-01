@@ -8,5 +8,6 @@ namespace Player
     {
         public float cameraSensitivity;
         public float movementSpeed;
+        public float jumpHeight;
     }
 }

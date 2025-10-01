@@ -12,6 +12,7 @@ namespace GameInput
 
         private InputAction _lookAction;
         private InputAction _moveAction;
+        private InputAction _jumpAction;
 
         public InputController(ITickNotifier tickNotifier, IInputNotifier inputNotifier)
         {
@@ -48,6 +49,7 @@ namespace GameInput
         {
             _lookAction = InputSystem.actions.FindAction("Look");
             _moveAction = InputSystem.actions.FindAction("Move");
+            _jumpAction = InputSystem.actions.FindAction("Jump");
         }
 
         private void CheckActionIsPressed()
@@ -64,6 +66,11 @@ namespace GameInput
                 var direction = _lookAction.ReadValue<Vector2>();
                 
                 _inputNotifier.NotifyLookIsInteracted(direction);
+            }
+
+            if (_jumpAction.IsPressed())
+            {
+                _inputNotifier.NotifyJumpIsPressed();
             }
         }
     }

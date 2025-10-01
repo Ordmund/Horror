@@ -15,3 +15,4 @@ MonoBehaviour:
   model:
     cameraSensitivity: 10
     movementSpeed: 10
+    jumpHeight: 2

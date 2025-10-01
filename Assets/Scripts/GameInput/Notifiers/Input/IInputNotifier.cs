@@ -7,8 +7,10 @@ namespace GameInput
     {
         event Action<Vector2> LookIsInteracted;
         event Action<Vector2> MoveIsPressed;
+        event Action JumpIsPressed;
 
         void NotifyLookIsInteracted(Vector2 direction);
         void NotifyMoveIsPressed(Vector2 direction);
+        void NotifyJumpIsPressed();
     }
 }
