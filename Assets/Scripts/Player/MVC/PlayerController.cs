@@ -14,9 +14,9 @@ namespace Player
         private readonly IInputNotifier _inputNotifier;
         private readonly IPlayerTransformNotifier _playerTransformNotifier;
         
-        private Vector3 _motion;
         private Vector2 _inputLookDirection;
         private Vector2 _inputMoveDirection;
+        private float _jumpVelocity;
         private bool _isJumpPressed;
 
         public PlayerController(PlayerView view, PlayerModel model, ITickNotifier tickNotifier, IInputNotifier inputNotifier, IPlayerTransformNotifier playerTransformNotifier) : base(view, model)
@@ -71,27 +71,25 @@ namespace Player
             
             _inputLookDirection = Vector2.zero;
         }
-        
+
         private void UpdateMovementMotion()
         {
             var moveDirection = View.Head.right * _inputMoveDirection.x + View.Head.forward * _inputMoveDirection.y;
-            _motion = moveDirection * Model.movementSpeed * Time.deltaTime;
+            var motion = moveDirection * Model.movementSpeed;
 
-            if (View.IsGrounded && _motion.y < 0f)
-                _motion.y = 0f;
-
-            if (View.IsGrounded && _isJumpPressed)
+            switch (View.IsGrounded)
             {
-                //Third kinematic equation: [v² = v₀² + 2aΔx], where v₀ = 0, because our starting point is from the ground
-                _motion.y = Mathf.Sqrt(2f * -Physics.gravity.y * Model.jumpHeight);
+                case true when _isJumpPressed:
+                    //Third kinematic equation: [v² = v₀² + 2aΔx], where v₀ = 0, because our starting point is from the ground
+                    _jumpVelocity = Mathf.Sqrt(2f * -Physics.gravity.y * Model.jumpHeight);
+                    break;
+                case false:
+                    _jumpVelocity += Physics.gravity.y * Time.deltaTime;
+                    break;
             }
 
-            if (!View.IsGrounded)
-            {
-                _motion.y += Physics.gravity.y * Time.deltaTime;
-            }
-
-            View.Move(_motion);
+            motion.y = _jumpVelocity;
+            View.Move(motion * Time.deltaTime);
 
             _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
 
