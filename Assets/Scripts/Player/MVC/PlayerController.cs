@@ -16,6 +16,7 @@ namespace Player
         
         private Vector2 _inputLookDirection;
         private Vector2 _inputMoveDirection;
+        private float _currentPitchAngle;
         private float _jumpVelocity;
         private bool _isJumpPressed;
 
@@ -55,17 +56,21 @@ namespace Player
         {
             _isJumpPressed = true;
         }
-        
+
+
+
         private void UpdateCameraDirection()
         {
             var xAngle = _inputLookDirection.x * Model.cameraSensitivity * Time.deltaTime;
             var yAngle = -_inputLookDirection.y * Model.cameraSensitivity * Time.deltaTime;
             
-            var yaw = Quaternion.AngleAxis(xAngle, Vector3.up);
-            var pitch = Quaternion.AngleAxis(yAngle, Vector3.right);
+            var yAngleClamped = Mathf.Clamp(_currentPitchAngle + yAngle, -Model.cameraPitchClamp, Model.cameraPitchClamp) - _currentPitchAngle;
+            _currentPitchAngle += yAngleClamped;
             
-            View.SetHeadRotation(yaw * View.Head.rotation);
-            View.SetHeadRotation(View.Head.rotation * pitch);
+            var yaw = Quaternion.AngleAxis(xAngle, Vector3.up);
+            var pitch = Quaternion.AngleAxis(yAngleClamped, Vector3.right);
+            
+            View.SetHeadRotation(yaw * View.Head.rotation * pitch);
             
             _playerTransformNotifier.NotifyHeadRotationChanged(View.Head.rotation);
             

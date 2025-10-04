@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player.ScriptableObjects.PlayerCameraSettings
   model:
     cameraSensitivity: 10
+    cameraPitchClamp: 50
     movementSpeed: 10
     jumpHeight: 3
