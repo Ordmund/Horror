@@ -17,5 +17,9 @@ MonoBehaviour:
     cameraPitchClamp: 50
     movementSpeed: 5
     sprintSpeed: 10
-    jumpHeight: 3
+    crouchSpeed: 3
     slideSpeed: 8
+    jumpHeight: 3
+    crouchedHeadPosition: {x: 0, y: 0.7, z: 0}
+    crouchedCenter: {x: 0, y: 0.1, z: 0}
+    crouchedHeight: 1

@@ -9,10 +9,12 @@ namespace GameInput
         event Action<Vector2> MoveIsPressed;
         event Action JumpIsPressed;
         event Action SprintIsPressed;
+        event Action CrouchIsPressed;
 
         void NotifyLookIsInteracted(Vector2 direction);
         void NotifyMoveIsPressed(Vector2 direction);
         void NotifyJumpIsPressed();
         void NotifySprintIsPressed();
+        void NotifyCrouchIsPressed();
     }
 }

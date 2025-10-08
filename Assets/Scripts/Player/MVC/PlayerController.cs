@@ -20,6 +20,8 @@ namespace Player
         private float _jumpVelocity;
         private bool _isJumpPressed;
         private bool _isSprintPressed;
+        private bool _isCrouchPressed;
+        private bool _isCrouching;
         private bool _isSliding;
 
         public PlayerController(PlayerView view, PlayerModel model, ITickNotifier tickNotifier, IInputNotifier inputNotifier, IPlayerTransformNotifier playerTransformNotifier) : base(view, model)
@@ -32,6 +34,8 @@ namespace Player
         public void Initialize()
         {
             TryLoadModelFromScriptableObject<PlayerSettings>();
+            
+            View.CacheCharacterHeight();
             
             SubscribeOnEvents();
 
@@ -47,15 +51,45 @@ namespace Player
         private void OnTick()
         {
             TrySlideDownSlope();
+            TryCrouch();
+            TryStandUp();
+            
             UpdateMovementMotion();
             UpdateCameraDirection();
+            
+            ClearInputTriggers();
+        }
+
+        private void TryCrouch()
+        {
+            if (_isCrouchPressed)
+            {
+                View.SetCrouchingView(Model.crouchedHeadPosition, Model.crouchedCenter, Model.crouchedHeight);
+
+                _isCrouching = true;
+            }
+        }
+
+        private void TryStandUp()
+        {
+            if (_isCrouching && !_isCrouchPressed)
+            {
+                var headroom = View.StandingCharacterHeight - Model.crouchedHeight;
+                var isThereNoObstaclesAbove = !Physics.Raycast(View.Position, Vector3.up, headroom);
+                if (isThereNoObstaclesAbove)
+                {
+                    View.SetStandingView();
+
+                    _isCrouching = false;
+                }
+            }
         }
         
         private void TrySlideDownSlope()
         {
             if (View.IsGrounded)
             {
-                if (Physics.Raycast(View.Transform.position, Vector3.down, out var hit, View.Height))
+                if (Physics.Raycast(View.Position, Vector3.down, out var hit, View.StandingCharacterHeight))
                 {
                     var slopeAngle = Vector3.Angle(hit.normal, Vector3.up);
                     if (slopeAngle > View.SlopeAngleLimit)
@@ -77,7 +111,7 @@ namespace Player
         private void UpdateMovementMotion()
         {
             var moveDirection = View.Head.right * _inputMoveDirection.x + View.Head.forward * _inputMoveDirection.y;
-            var movementSpeed = _isSprintPressed ? Model.sprintSpeed : Model.movementSpeed;
+            var movementSpeed = _isCrouching ? Model.crouchSpeed : _isSprintPressed ? Model.sprintSpeed : Model.movementSpeed;
             var motion = moveDirection * movementSpeed;
 
             switch (View.IsGrounded)
@@ -95,8 +129,6 @@ namespace Player
             View.Move(motion * Time.deltaTime);
 
             _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
-
-            ClearInputTriggers();
         }
         
         private void UpdateCameraDirection()
@@ -137,10 +169,16 @@ namespace Player
             _isSprintPressed = true;
         }
         
+        private void OnCrouchPressed()
+        {
+            _isCrouchPressed = true;
+        }
+        
         private void ClearInputTriggers()
         {
             _isJumpPressed = false;
             _isSprintPressed = false;
+            _isCrouchPressed = false;
             _inputMoveDirection = Vector2.zero;
         }
 
@@ -152,6 +190,7 @@ namespace Player
             _inputNotifier.MoveIsPressed += OnMovePressed;
             _inputNotifier.JumpIsPressed += OnJumpPressed;
             _inputNotifier.SprintIsPressed += OnSprintPressed;
+            _inputNotifier.CrouchIsPressed += OnCrouchPressed;
         }
 
         private void UnsubscribeFromEvents()
@@ -162,6 +201,7 @@ namespace Player
             _inputNotifier.MoveIsPressed -= OnMovePressed;
             _inputNotifier.JumpIsPressed -= OnJumpPressed;
             _inputNotifier.SprintIsPressed -= OnSprintPressed;
+            _inputNotifier.CrouchIsPressed -= OnCrouchPressed;
         }
 
         public void Dispose()
