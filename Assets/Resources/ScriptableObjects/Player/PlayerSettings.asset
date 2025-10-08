@@ -17,3 +17,4 @@ MonoBehaviour:
     cameraPitchClamp: 50
     movementSpeed: 10
     jumpHeight: 3
+    slideSpeed: 8

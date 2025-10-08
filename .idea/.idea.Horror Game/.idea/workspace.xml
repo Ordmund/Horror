@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6045fdc4-74a1-40f0-94b7-3c64924a52f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Horror Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Horror Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/World/World.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/World/World.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/World/Playground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Addressables/World/Playground.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Player/PlayerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Player/PlayerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +155,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Tasks/LoadWorldTask.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World/Tasks/LoadWorldTask.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Settings/PC_RPAsset.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ThirdParty.meta" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -290,7 +293,8 @@
       <workItem from="1759324401463" duration="6651000" />
       <workItem from="1759332409543" duration="3177000" />
       <workItem from="1759580498581" duration="5732000" />
-      <workItem from="1759851540403" duration="346000" />
+      <workItem from="1759851540403" duration="388000" />
+      <workItem from="1759897805329" duration="2400000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <option name="closed" value="true" />
@@ -652,7 +656,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759585621939</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Added Playground prefab to test movements and physics.">
+      <option name="closed" value="true" />
+      <created>1759851913016</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1759851913016</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -691,7 +703,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added GameStateMachine. Moved PlayerLoading to LoadingTask game state." />
     <MESSAGE value="Removed obsolete TaskScheduler, replaced with System.Threading.Tasks.Task usages for async code. Added Async instantiation to GameObjectMVCFactory." />
     <MESSAGE value="Added TaskExtensions to run tasks from synchronous code." />
     <MESSAGE value="Changed using obsolete TaskScheduler to async/await behaviour for tasks. Added world loading task. Minor namespaces refactoring." />
@@ -716,7 +727,8 @@
     <MESSAGE value="Minor movement and jump systems fixes and refactoring." />
     <MESSAGE value="Updated Unity version. Changed gravity value for better jump and gravity experience." />
     <MESSAGE value="Added camera pitch clamp." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added camera pitch clamp." />
+    <MESSAGE value="Added Playground prefab to test movements and physics." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Playground prefab to test movements and physics." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

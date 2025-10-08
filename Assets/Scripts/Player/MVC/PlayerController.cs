@@ -19,6 +19,7 @@ namespace Player
         private float _currentPitchAngle;
         private float _jumpVelocity;
         private bool _isJumpPressed;
+        private bool _isSliding;
 
         public PlayerController(PlayerView view, PlayerModel model, ITickNotifier tickNotifier, IInputNotifier inputNotifier, IPlayerTransformNotifier playerTransformNotifier) : base(view, model)
         {
@@ -41,24 +42,62 @@ namespace Player
             _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
             _playerTransformNotifier.NotifyHeadRotationChanged(View.Head.rotation);
         }
-        
-        private void OnLookInteracted(Vector2 direction)
-        {
-            _inputLookDirection = direction;
-        }
 
-        private void OnMovePressed(Vector2 direction)
+        private void OnTick()
         {
-            _inputMoveDirection = direction;
+            TrySlideDownSlope();
+            UpdateMovementMotion();
+            UpdateCameraDirection();
         }
         
-        private void OnJumpPressed()
+        private void TrySlideDownSlope()
         {
-            _isJumpPressed = true;
+            if (View.IsGrounded)
+            {
+                if (Physics.Raycast(View.Transform.position, Vector3.down, out var hit, View.Height))
+                {
+                    var slopeAngle = Vector3.Angle(hit.normal, Vector3.up);
+                    if (slopeAngle > View.SlopeAngleLimit)
+                    {
+                        var slideDirection = new Vector3(hit.normal.x, -hit.normal.y, hit.normal.z);
+                        
+                        View.Move(slideDirection * Model.slideSpeed * Time.deltaTime);
+
+                        _isSliding = true;
+                    }
+                    else
+                    {
+                        _isSliding = false;
+                    }
+                }
+            }
         }
+        
+        private void UpdateMovementMotion()
+        {
+            var moveDirection = View.Head.right * _inputMoveDirection.x + View.Head.forward * _inputMoveDirection.y;
+            var motion = moveDirection * Model.movementSpeed;
 
+            switch (View.IsGrounded)
+            {
+                //Third kinematic equation: [v² = v₀² + 2aΔx], where v₀ = 0, because our starting point is from the ground
+                case true when _isJumpPressed && !_isSliding:
+                    _jumpVelocity = Mathf.Sqrt(2f * -Physics.gravity.y * Model.jumpHeight);
+                    break;
+                case false:
+                    _jumpVelocity += Physics.gravity.y * Time.deltaTime;
+                    break;
+            }
 
+            motion.y = _jumpVelocity;
+            View.Move(motion * Time.deltaTime);
 
+            _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
+
+            _isJumpPressed = false;
+            _inputMoveDirection = Vector2.zero;
+        }
+        
         private void UpdateCameraDirection()
         {
             var xAngle = _inputLookDirection.x * Model.cameraSensitivity * Time.deltaTime;
@@ -76,36 +115,26 @@ namespace Player
             
             _inputLookDirection = Vector2.zero;
         }
-
-        private void UpdateMovementMotion()
+        
+        private void OnLookInteracted(Vector2 direction)
         {
-            var moveDirection = View.Head.right * _inputMoveDirection.x + View.Head.forward * _inputMoveDirection.y;
-            var motion = moveDirection * Model.movementSpeed;
+            _inputLookDirection = direction;
+        }
 
-            switch (View.IsGrounded)
-            {
-                case true when _isJumpPressed:
-                    //Third kinematic equation: [v² = v₀² + 2aΔx], where v₀ = 0, because our starting point is from the ground
-                    _jumpVelocity = Mathf.Sqrt(2f * -Physics.gravity.y * Model.jumpHeight);
-                    break;
-                case false:
-                    _jumpVelocity += Physics.gravity.y * Time.deltaTime;
-                    break;
-            }
-
-            motion.y = _jumpVelocity;
-            View.Move(motion * Time.deltaTime);
-
-            _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
-
-            _isJumpPressed = false;
-            _inputMoveDirection = Vector2.zero;
+        private void OnMovePressed(Vector2 direction)
+        {
+            _inputMoveDirection = direction;
+        }
+        
+        private void OnJumpPressed()
+        {
+            _isJumpPressed = true;
         }
 
         private void SubscribeOnEvents()
         {
-            _tickNotifier.SubscribeOnLateTick(UpdateCameraDirection);
-            _tickNotifier.SubscribeOnTick(UpdateMovementMotion);
+            _tickNotifier.SubscribeOnTick(OnTick);
+            
             _inputNotifier.LookIsInteracted += OnLookInteracted;
             _inputNotifier.MoveIsPressed += OnMovePressed;
             _inputNotifier.JumpIsPressed += OnJumpPressed;
@@ -113,8 +142,8 @@ namespace Player
 
         private void UnsubscribeFromEvents()
         {
-            _tickNotifier.UnsubscribeFromLateTick(UpdateCameraDirection);
-            _tickNotifier.UnsubscribeFromTick(UpdateMovementMotion);
+            _tickNotifier.UnsubscribeFromTick(OnTick);
+            
             _inputNotifier.LookIsInteracted -= OnLookInteracted;
             _inputNotifier.MoveIsPressed -= OnMovePressed;
             _inputNotifier.JumpIsPressed -= OnJumpPressed;
