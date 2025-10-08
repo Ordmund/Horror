@@ -19,6 +19,7 @@ namespace Player
         private float _currentPitchAngle;
         private float _jumpVelocity;
         private bool _isJumpPressed;
+        private bool _isSprintPressed;
         private bool _isSliding;
 
         public PlayerController(PlayerView view, PlayerModel model, ITickNotifier tickNotifier, IInputNotifier inputNotifier, IPlayerTransformNotifier playerTransformNotifier) : base(view, model)
@@ -76,7 +77,8 @@ namespace Player
         private void UpdateMovementMotion()
         {
             var moveDirection = View.Head.right * _inputMoveDirection.x + View.Head.forward * _inputMoveDirection.y;
-            var motion = moveDirection * Model.movementSpeed;
+            var movementSpeed = _isSprintPressed ? Model.sprintSpeed : Model.movementSpeed;
+            var motion = moveDirection * movementSpeed;
 
             switch (View.IsGrounded)
             {
@@ -94,8 +96,7 @@ namespace Player
 
             _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
 
-            _isJumpPressed = false;
-            _inputMoveDirection = Vector2.zero;
+            ClearInputTriggers();
         }
         
         private void UpdateCameraDirection()
@@ -130,6 +131,18 @@ namespace Player
         {
             _isJumpPressed = true;
         }
+        
+        private void OnSprintPressed()
+        {
+            _isSprintPressed = true;
+        }
+        
+        private void ClearInputTriggers()
+        {
+            _isJumpPressed = false;
+            _isSprintPressed = false;
+            _inputMoveDirection = Vector2.zero;
+        }
 
         private void SubscribeOnEvents()
         {
@@ -138,6 +151,7 @@ namespace Player
             _inputNotifier.LookIsInteracted += OnLookInteracted;
             _inputNotifier.MoveIsPressed += OnMovePressed;
             _inputNotifier.JumpIsPressed += OnJumpPressed;
+            _inputNotifier.SprintIsPressed += OnSprintPressed;
         }
 
         private void UnsubscribeFromEvents()
@@ -147,6 +161,7 @@ namespace Player
             _inputNotifier.LookIsInteracted -= OnLookInteracted;
             _inputNotifier.MoveIsPressed -= OnMovePressed;
             _inputNotifier.JumpIsPressed -= OnJumpPressed;
+            _inputNotifier.SprintIsPressed -= OnSprintPressed;
         }
 
         public void Dispose()

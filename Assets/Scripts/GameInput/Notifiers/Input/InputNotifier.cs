@@ -8,6 +8,7 @@ namespace GameInput
         public event Action<Vector2> LookIsInteracted;
         public event Action<Vector2> MoveIsPressed;
         public event Action JumpIsPressed;
+        public event Action SprintIsPressed;
 
         public void NotifyLookIsInteracted(Vector2 direction)
         {
@@ -22,6 +23,11 @@ namespace GameInput
         public void NotifyJumpIsPressed()
         {
             JumpIsPressed?.Invoke();
+        }
+
+        public void NotifySprintIsPressed()
+        {
+            SprintIsPressed?.Invoke();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace GameInput
         private InputAction _lookAction;
         private InputAction _moveAction;
         private InputAction _jumpAction;
+        private InputAction _sprintAction;
 
         public InputController(ITickNotifier tickNotifier, IInputNotifier inputNotifier)
         {
@@ -50,6 +51,7 @@ namespace GameInput
             _lookAction = InputSystem.actions.FindAction("Look");
             _moveAction = InputSystem.actions.FindAction("Move");
             _jumpAction = InputSystem.actions.FindAction("Jump");
+            _sprintAction = InputSystem.actions.FindAction("Sprint");
         }
 
         private void CheckActionIsPressed()
@@ -71,6 +73,11 @@ namespace GameInput
             if (_jumpAction.IsPressed())
             {
                 _inputNotifier.NotifyJumpIsPressed();
+            }
+            
+            if (_sprintAction.IsPressed())
+            {
+                _inputNotifier.NotifySprintIsPressed();
             }
         }
     }

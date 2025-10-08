@@ -9,6 +9,7 @@ namespace Player
         public float cameraSensitivity;
         public float cameraPitchClamp;
         public float movementSpeed;
+        public float sprintSpeed;
         public float jumpHeight;
         public float slideSpeed;
     }

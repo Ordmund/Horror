@@ -15,6 +15,7 @@ MonoBehaviour:
   model:
     cameraSensitivity: 10
     cameraPitchClamp: 50
-    movementSpeed: 10
+    movementSpeed: 5
+    sprintSpeed: 10
     jumpHeight: 3
     slideSpeed: 8
