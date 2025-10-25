@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Player
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 711df820edda13842b8d0b52fd0ebbbd
+    m_Address: Assets/Prefabs/Addressables/Player/Player_Capsule.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Player
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 21b7ba62e4505c24fb0216886b655a23, type: 2}
   m_SchemaSet:

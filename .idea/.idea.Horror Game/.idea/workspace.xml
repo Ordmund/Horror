@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6045fdc4-74a1-40f0-94b7-3c64924a52f2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/RaycastLayers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/RaycastLayers.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Horror Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Horror Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/PlayerController.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/World/Playground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Addressables/World/Playground.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/Addressables/AddressablesPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/Addressables/AddressablesPaths.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,11 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -63,6 +69,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7b8172fcdd864e17924794813da717121f5e00/0a/e2d7aa8d/CursorLockMode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7b8172fcdd864e17924794813da717121f5e00/b2/d7f77e13/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7b8172fcdd864e17924794813da717121f5e00/da/8115b914/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ecbe576335340c9b6a2b5b3da3e46db29c00/1c/7996dd28/Physics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/0e/d6edd60d/Resources.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/24/914ae329/LogType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98fbc9de20ae47d9bb2559ab79ec66431f5a00/49/f69d2855/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
@@ -101,7 +108,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/PolygonDungeon.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Camera.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Camera/FirstPersonCamera.prefab.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/PlayerController.controller" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Prefabs/Addressables/Player/Animations/PlayerController.controller" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Prefabs/Addressables/Player/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player_Capsule.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/World/Playground.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/World/Playground.prefab.meta" root0="FORCE_HIGHLIGHTING" />
@@ -122,6 +133,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants/Addressables.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants/Addressables/AddressablesPaths.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants/Logs/LogChannel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants/RaycastLayers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/SceneContextRunner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/SceneContextRunner.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/SubmodulesDependenciesInitialization.cs" root0="FORCE_HIGHLIGHTING" />
@@ -146,6 +158,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStates/Tasks/LoadingTask.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Installers.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Installers/PlayerInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Player/MVC/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Player/MVC/PlayerView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Notifiers.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Notifiers/IPlayerTransformNotifier.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Notifiers/PlayerTransformNotifier.cs.meta" root0="FORCE_HIGHLIGHTING" />
@@ -179,7 +193,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Character-Animations&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -297,14 +311,11 @@
       <workItem from="1759851540403" duration="388000" />
       <workItem from="1759897805329" duration="17682000" />
       <workItem from="1759933285141" duration="879000" />
-    </task>
-    <task id="LOCAL-00001" summary="Initial commit.">
-      <option name="closed" value="true" />
-      <created>1755674375539</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1755674375539</updated>
+      <workItem from="1761144569059" duration="1043000" />
+      <workItem from="1761300171962" duration="1426000" />
+      <workItem from="1761385102195" duration="3016000" />
+      <workItem from="1761490799179" duration="85000" />
+      <workItem from="1761537305496" duration="4485000" />
     </task>
     <task id="LOCAL-00002" summary="Added Core and ThirdParty submodules.">
       <option name="closed" value="true" />
@@ -690,7 +701,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759919968877</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Added character movement animations">
+      <option name="closed" value="true" />
+      <created>1761389943867</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1761389943867</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,7 +748,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added OnComplete and OnAbort methods to TaskExtensions." />
     <MESSAGE value="Added switch to Game state after completing Loading state." />
     <MESSAGE value="Moved  Task events subscription and calling to AsyncTask." />
     <MESSAGE value="Fixed Tasks execution before it runs through try/catch block in TasksExtensions. Minor refactoring." />
@@ -754,7 +772,8 @@
     <MESSAGE value="Added sliding from steep slopes functionality. A bit of playground fixes." />
     <MESSAGE value="Added sprint functionality." />
     <MESSAGE value="Added crouch functionality. Added small obstacles to the Playground." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added crouch functionality. Added small obstacles to the Playground." />
+    <MESSAGE value="Added character movement animations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added character movement animations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

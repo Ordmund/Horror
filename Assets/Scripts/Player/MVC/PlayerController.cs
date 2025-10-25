@@ -1,4 +1,5 @@
 using System;
+using Constants;
 using Core.Managers.Injectable;
 using Core.MVC;
 using GameInput;
@@ -23,6 +24,7 @@ namespace Player
         private bool _isCrouchPressed;
         private bool _isCrouching;
         private bool _isSliding;
+        private bool _isJumping;
 
         public PlayerController(PlayerView view, PlayerModel model, ITickNotifier tickNotifier, IInputNotifier inputNotifier, IPlayerTransformNotifier playerTransformNotifier) : base(view, model)
         {
@@ -75,7 +77,7 @@ namespace Player
             if (_isCrouching && !_isCrouchPressed)
             {
                 var headroom = View.StandingCharacterHeight - Model.crouchedHeight;
-                var isThereNoObstaclesAbove = !Physics.Raycast(View.Position, Vector3.up, headroom);
+                var isThereNoObstaclesAbove = !Physics.Raycast(View.Position, Vector3.up, headroom, RaycastLayers.GroundMask);
                 if (isThereNoObstaclesAbove)
                 {
                     View.SetStandingView();
@@ -114,21 +116,35 @@ namespace Player
             var movementSpeed = _isCrouching ? Model.crouchSpeed : _isSprintPressed ? Model.sprintSpeed : Model.movementSpeed;
             var motion = moveDirection * movementSpeed;
 
+            UpdateJumpVelocity();
+
+            motion.y = _jumpVelocity;
+            View.Move(motion * Time.deltaTime);
+            View.SetMovementAnimationVelocity(motion.x, motion.z);
+            View.SetJumpingAnimationState(_isJumping);
+
+            _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
+        }
+
+        private void UpdateJumpVelocity()
+        {
             switch (View.IsGrounded)
             {
-                //Third kinematic equation: [v² = v₀² + 2aΔx], where v₀ = 0, because our starting point is from the ground
                 case true when _isJumpPressed && !_isSliding:
+                    //Third kinematic equation: [v² = v₀² + 2aΔx], where v₀ = 0, because our starting point is from the ground
                     _jumpVelocity = Mathf.Sqrt(2f * -Physics.gravity.y * Model.jumpHeight);
+                    _isJumping = true;
                     break;
+                
+                case true:
+                    _jumpVelocity = 0f;
+                    _isJumping = false;
+                    break;
+                
                 case false:
                     _jumpVelocity += Physics.gravity.y * Time.deltaTime;
                     break;
             }
-
-            motion.y = _jumpVelocity;
-            View.Move(motion * Time.deltaTime);
-
-            _playerTransformNotifier.NotifyHeadPositionChanged(View.Head.position);
         }
         
         private void UpdateCameraDirection()

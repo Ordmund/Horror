@@ -5,6 +5,7 @@ namespace Player
 {
     public class PlayerView : BaseView
     {
+        [SerializeField] private Animator _animator;
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private Transform _transform;
         [SerializeField] private Transform _headTransform;
@@ -18,6 +19,23 @@ namespace Player
         private Vector3 _standingCharacterHeadPosition;
         private Vector3 _standingCharacterCenter;
         private float _standingCharacterHeight;
+        private int _xVelocityHash;
+        private int _yVelocityHash;
+        private int _crouchingHash;
+        private int _jumpingHash;
+        
+        private const string XVelocityKey = "X Velocity";
+        private const string YVelocityKey = "Y Velocity";
+        private const string CrouchingKey = "Crouching";
+        private const string JumpingKey = "Jumping";
+
+        private void Awake()
+        {
+            _xVelocityHash = Animator.StringToHash(XVelocityKey);
+            _yVelocityHash = Animator.StringToHash(YVelocityKey);
+            _crouchingHash = Animator.StringToHash(CrouchingKey);
+            _jumpingHash = Animator.StringToHash(JumpingKey);
+        }
 
         public void CacheCharacterHeight()
         {
@@ -43,6 +61,8 @@ namespace Player
             
             _characterController.center = characterCenter;
             _characterController.height = characterHeight;
+
+            _animator.SetBool(_crouchingHash, true);
         }
 
         public void SetStandingView()
@@ -51,6 +71,19 @@ namespace Player
             
             _characterController.center = _standingCharacterCenter;
             _characterController.height = _standingCharacterHeight;
+            
+            _animator.SetBool(_crouchingHash, false);
+        }
+
+        public void SetMovementAnimationVelocity(float xVelocity, float yVelocity)
+        {
+            _animator.SetFloat(_xVelocityHash, xVelocity);
+            _animator.SetFloat(_yVelocityHash, yVelocity);
+        }
+        
+        public void SetJumpingAnimationState(bool isJumping)
+        {
+            _animator.SetBool(_jumpingHash, isJumping);
         }
     }
 }
