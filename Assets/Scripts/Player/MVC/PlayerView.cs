@@ -8,9 +8,9 @@ namespace Player
         [SerializeField] private Animator _animator;
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private Transform _transform;
-        [SerializeField] private Transform _headTransform;
+        [SerializeField] private Transform _headTargetTransform;
         
-        public Transform Head => _headTransform;
+        public Transform Head => _headTargetTransform;
         public Vector3 Position => _transform.position;
         public float StandingCharacterHeight => _standingCharacterHeight;
         public float SlopeAngleLimit => _characterController.slopeLimit;
@@ -39,15 +39,15 @@ namespace Player
 
         public void CacheCharacterHeight()
         {
-            _standingCharacterHeadPosition = Head.localPosition;
+            _standingCharacterHeadPosition = _headTargetTransform.localPosition;
             
             _standingCharacterCenter = _characterController.center;
-            _standingCharacterHeight =  _characterController.height;
+            _standingCharacterHeight = _characterController.height;
         }
 
         public void SetHeadRotation(Quaternion rotation)
         {
-            _headTransform.rotation = rotation;
+            _headTargetTransform.rotation = rotation;
         }
 
         public void Move(Vector3 motion)
@@ -57,7 +57,7 @@ namespace Player
 
         public void SetCrouchingView(Vector3 headPosition, Vector3 characterCenter, float characterHeight)
         {
-            Head.transform.localPosition = headPosition;
+            _headTargetTransform.localPosition = headPosition;
             
             _characterController.center = characterCenter;
             _characterController.height = characterHeight;
@@ -67,7 +67,7 @@ namespace Player
 
         public void SetStandingView()
         {
-            Head.transform.localPosition = _standingCharacterHeadPosition;
+            _headTargetTransform.localPosition = _standingCharacterHeadPosition;
             
             _characterController.center = _standingCharacterCenter;
             _characterController.height = _standingCharacterHeight;

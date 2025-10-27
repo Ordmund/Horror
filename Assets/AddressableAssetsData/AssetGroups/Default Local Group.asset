@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Player
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5bf39a41cd5490d4f8e27f72ccde7266
+    m_Address: Assets/Prefabs/Addressables/Cheats/Cheat Panel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cheats
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 711df820edda13842b8d0b52fd0ebbbd
     m_Address: Assets/Prefabs/Addressables/Player/Player_Capsule.prefab
     m_ReadOnly: 0

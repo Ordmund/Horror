@@ -34,7 +34,7 @@ namespace Camera
 
         private void UpdateCameraPosition(Vector3 position)
         {
-            View.SetCameraPosition(position);
+            View.SetCameraPosition(position + Model.positionOffset);
         }
 
         private void UpdateCameraRotation(Quaternion rotation)

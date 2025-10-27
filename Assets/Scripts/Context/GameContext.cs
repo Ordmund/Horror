@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Context
 {
-    public class GameContext : IGameContext, IInitializable, IDisposable
+    public class GameContext : IInitializable, IDisposable
     {
         private readonly IGameStateMachine _gameStateMachine;
         private readonly IFactory<InputController> _inputControllerFactory;

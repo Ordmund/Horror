@@ -1,0 +1,20 @@
+{
+    "name": "Cheats",
+    "rootNamespace": "Cheats",
+    "references": [
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:4cd83707a5520fd40892e7e9b218e1e3",
+        "GUID:43663898a80b97940b7af24ec17dd22a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_EDITOR || DEVELOPMENT_BUILD"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

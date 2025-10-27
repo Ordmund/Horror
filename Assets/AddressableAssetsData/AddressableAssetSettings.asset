@@ -102,6 +102,7 @@ MonoBehaviour:
     - World
     - Player
     - Camera
+    - Cheats
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 1cf5f7607418bc24093bdbc9563ae8e9, type: 2}
