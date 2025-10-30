@@ -7,6 +7,10 @@ namespace Player
     [Serializable]
     public class PlayerModel : BaseModel
     {
+        [Header("Animation")] 
+        public float headHorizontalRotationMaxAngle;
+        public float bodyRotationAngle;
+        
         [Header("Camera")]
         public float cameraSensitivity;
         public float cameraPitchClamp;
