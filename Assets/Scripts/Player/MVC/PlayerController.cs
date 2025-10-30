@@ -158,7 +158,7 @@ namespace Player
 
         private void TryCrouch()
         {
-            if (_isCrouchPressed)
+            if (_isCrouchPressed && !_state.HasFlag(CharacterState.Crouching))
             {
                 View.SetCrouchingView(Model.crouchedHeadPosition, Model.crouchedCenter, Model.crouchedHeight);
 
@@ -251,7 +251,7 @@ namespace Player
             var animationProgress = (_turningProgress - _turningStartTime) / (_turningEndTime - _turningStartTime);
             View.SetBodyRotation(Quaternion.Slerp(_basicBodyRotation, _bodyTargetRotation, animationProgress));
 
-            if (_turningProgress >= _turningEndTime || HasAnyState(CharacterState.Moving | CharacterState.Crouching | CharacterState.Jumping | CharacterState.Sliding))
+            if (_turningProgress >= _turningEndTime || HasAnyState(CharacterState.Moving | CharacterState.Jumping | CharacterState.Sliding))
             {
                 _state &= ~CharacterState.Turning;
             }
