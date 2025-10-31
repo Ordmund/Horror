@@ -1,5 +1,5 @@
 using System;
-using ColoredLogger;
+using Camera;
 using Zenject;
 
 namespace Cheats
@@ -7,10 +7,12 @@ namespace Cheats
     public class CheatsHandler : ICheatsHandler, IInitializable, IDisposable
     {
         private readonly ICheatsPanelNotifier _cheatsPanelNotifier;
+        private readonly ICameraSwitchDispatcher _cameraSwitchDispatcher;
 
-        public CheatsHandler(ICheatsPanelNotifier cheatsPanelNotifier)
+        public CheatsHandler(ICheatsPanelNotifier cheatsPanelNotifier, ICameraSwitchDispatcher cameraSwitchDispatcher)
         {
             _cheatsPanelNotifier = cheatsPanelNotifier;
+            _cameraSwitchDispatcher = cameraSwitchDispatcher;
         }
 
         public void Initialize()
@@ -25,38 +27,32 @@ namespace Cheats
 
         private void OnFirstPersonCameraButtonClicked()
         {
-            "First Person Camera Cheats".Log(LogColor.BlueViolet);
-            //TODO First Person Camera Cheat
+            _cameraSwitchDispatcher.RequestSwitchCameraMode(CameraMode.FirstPerson);
         }
-        
+
         private void OnFrontCameraButtonClicked()
         {
-            "Front Camera Cheats".Log(LogColor.BlueViolet);
-            //TODO Front Camera Cheat
+            _cameraSwitchDispatcher.RequestSwitchCameraMode(CameraMode.ThirdPersonFront);
         }
-        
+
         private void OnBackCameraButtonClicked()
         {
-            "Back Camera Cheats".Log(LogColor.BlueViolet);
-            //TODO Back Camera Cheat
+            _cameraSwitchDispatcher.RequestSwitchCameraMode(CameraMode.ThirdPersonBack);
         }
-        
+
         private void OnLeftCameraButtonClicked()
         {
-            "Left Camera Cheats".Log(LogColor.BlueViolet);
-            //TODO Left Camera Cheat
+            _cameraSwitchDispatcher.RequestSwitchCameraMode(CameraMode.ThirdPersonLeft);
         }
-        
+
         private void OnRightCameraButtonClicked()
         {
-            "Right Camera Cheats".Log(LogColor.BlueViolet);
-            //TODO Right Camera Cheat
+            _cameraSwitchDispatcher.RequestSwitchCameraMode(CameraMode.ThirdPersonRight);
         }
-        
+
         private void OnTopDownCameraButtonClicked()
         {
-            "Top Down Camera Cheats".Log(LogColor.BlueViolet);
-            //TODO Top Down Camera Cheat
+            _cameraSwitchDispatcher.RequestSwitchCameraMode(CameraMode.TopDown);
         }
 
         public void Dispose()

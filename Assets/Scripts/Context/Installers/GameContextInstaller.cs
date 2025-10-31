@@ -1,3 +1,4 @@
+using Camera;
 using GameInput;
 using GameStates;
 using Player;
@@ -11,7 +12,7 @@ namespace Context
         public override void InstallBindings()
         {
             InstallGameInstallers();
-            
+
             BindGameContext();
         }
 
@@ -26,6 +27,7 @@ namespace Context
             InputInstaller.Install(Container);
             WorldInstaller.Install(Container);
             PlayerInstaller.Install(Container);
+            CameraInstaller.Install(Container);
         }
     }
 }

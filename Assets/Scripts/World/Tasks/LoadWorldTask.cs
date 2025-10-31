@@ -8,7 +8,7 @@ namespace World
     public class LoadWorldTask : AsyncTask
     {
         private bool _isCompleted;
-        
+
         public override Task Execute()
         {
             return Instantiate();
@@ -20,7 +20,7 @@ namespace World
 
             await instantiateAssetTask.Task;
 
-            var world = instantiateAssetTask.Result;
+            _ = instantiateAssetTask.Result;
         }
     }
 }

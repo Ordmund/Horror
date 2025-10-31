@@ -182,4 +182,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1c56e293e3445ea5c01dd45d280700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Camera.FirstPersonCameraView
+  _camera: {fileID: 7207336493578225421}
   _cameraTransform: {fileID: 2444504506137715475}

@@ -6,12 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6045fdc4-74a1-40f0-94b7-3c64924a52f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Horror Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Horror Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/Crouching Turn Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/Crouching Turn Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/Crouching Turn Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/Crouching Turn Right.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/PlayerController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Player/PlayerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Player/PlayerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MVC/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/Addressables/AddressablesPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/Addressables/AddressablesPaths.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Cheats" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,6 +54,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3209c419f8514dc7af6f7bbce69cabc61f7200/cb/9226e886/Transform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35be019606484cd09ebec4168af849f92400/30/f5d9fbeb/Logs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35be019606484cd09ebec4168af849f92400/a0/5f7cc189/ColorTagsFormatter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35be019606484cd09ebec4168af849f92400/a8/52698280/LogType.cs" root0="SKIP_HIGHLIGHTING" />
@@ -104,8 +107,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPathProvider.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/MVC/PathProvider/PrefabsPaths.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/Managers/Injectable/UnityCallbacks/ITickNotifier.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Core/Managers/Injectable/UnityCallbacks/TickNotifier.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/Managers/Injectable/UnityCallbacks/TickNotifier.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Core/Managers/Static/ScriptableObjects/Editor/ScriptableObjectsCreator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/Managers/Static/Tasks.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/Managers/Static/Tasks/TaskExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Core/Managers/Static/Tasks/TaskExtensions.cs.meta" root0="FORCE_HIGHLIGHTING" />
@@ -118,27 +121,41 @@
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Cheats/Cheat Panel.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/Crouching Turn Left.anim" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/Crouching Turn Right.anim" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Animations/PlayerController.controller" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Prefabs/Addressables/Player/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/Player/Player_Capsule.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/World/Playground.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Addressables/World/Playground.prefab.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Camera.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/ScriptableObjects/PathHandler.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Player.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Player/PlayerSettings.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Resources/ScriptableObjects/Player/PlayerSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/ScriptableObjects/PrefabsPaths/PrefabsPaths.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraSwitchDispatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Enums/CameraMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/ICameraSwitchDispatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Installers/CameraInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCameraController.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCameraModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCameraModel.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCameraView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCameraView.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCamera/FirstPersonCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCamera/FirstPersonCameraController.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCamera/FirstPersonCameraModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCamera/FirstPersonCameraModel.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCamera/FirstPersonCameraView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/FirstPersonCamera/FirstPersonCameraView.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/ThirdPersonCamera.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/ThirdPersonCamera/ThirdPersonCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Camera/MVC/ThirdPersonCamera/ThirdPersonCameraController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/ThirdPersonCamera/ThirdPersonCameraModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/ThirdPersonCamera/ThirdPersonCameraModel.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/ThirdPersonCamera/ThirdPersonCameraView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Camera/MVC/ThirdPersonCamera/ThirdPersonCameraView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MVC/ThirdPersonCamera/ThirdPersonCameraView.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/ScriptableObjects/CameraModeSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Tasks.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Tasks/LoadCameraTask.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cheats/CheatsContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cheats/Handlers/CheatsHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cheats/Handlers/ICheatsHandler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -162,6 +179,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/SceneContextRunner.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/SubmodulesDependenciesInitialization.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/SubmodulesDependenciesInitialization.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ScriptableObjectsCreator.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInput/Controllers/Input.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInput/Installers.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInput/Notifiers/Input/IInputNotifier.cs.meta" root0="FORCE_HIGHLIGHTING" />
@@ -184,8 +202,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Installers.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Installers/PlayerInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Player/MVC/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Player/MVC/PlayerModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Work/Horror Game/Assets/Scripts/Player/MVC/PlayerView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Notifiers.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Notifiers/IPlayerTransformNotifier.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Notifiers/PlayerTransformNotifier.cs.meta" root0="FORCE_HIGHLIGHTING" />
@@ -203,6 +219,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/ThirdParty.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.animation.rigging@e106d1f78228/Runtime/AnimationJobs/MultiAimConstraintJob.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.animation.rigging@e106d1f78228/Runtime/AnimationJobs/TransformHandle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Work/Horror Game/Packages/packages-lock.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -223,7 +240,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CameraCheats&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -236,7 +253,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.10f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Work\Horror Game&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Work\Horror Game" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -248,7 +265,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.10f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\Work\Horror Game&quot; -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Work\Horror Game" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -351,39 +368,12 @@
       <workItem from="1761706088326" duration="12928000" />
       <workItem from="1761730765333" duration="2010000" />
       <workItem from="1761792702624" duration="22857000" />
-      <workItem from="1761832635931" duration="6319000" />
-    </task>
-    <task id="LOCAL-00009" summary="Finished GameObjectMVC factory. Minor refactoring in ScriptableObjectManager.">
-      <option name="closed" value="true" />
-      <created>1756296638215</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1756296638215</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Removed empty folder.">
-      <option name="closed" value="true" />
-      <created>1756296649244</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1756296649244</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Renamed main scene. Removed unused code.">
-      <option name="closed" value="true" />
-      <created>1756296733770</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1756296733770</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Added PrefabPath provider.">
-      <option name="closed" value="true" />
-      <created>1756299220997</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1756299220997</updated>
+      <workItem from="1761832635931" duration="6436000" />
+      <workItem from="1761907783147" duration="10328000" />
+      <workItem from="1761964645241" duration="590000" />
+      <workItem from="1762319346953" duration="6000" />
+      <workItem from="1762319759067" duration="598000" />
+      <workItem from="1762354769123" duration="653000" />
     </task>
     <task id="LOCAL-00013" summary="Moved PathProvider logic to Core submodule.">
       <option name="closed" value="true" />
@@ -745,7 +735,39 @@
       <option name="project" value="LOCAL" />
       <updated>1761837440625</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Fixed Crouching animations.">
+      <option name="closed" value="true" />
+      <created>1761840226401</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1761840226401</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Changed menu item name.">
+      <option name="closed" value="true" />
+      <created>1761918354333</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1761918354334</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Fixed wrong grammar.">
+      <option name="closed" value="true" />
+      <created>1761923186742</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1761923186742</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Fixed wrong camera position when switching modes.">
+      <option name="closed" value="true" />
+      <created>1761923454251</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1761923454251</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -784,10 +806,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added PlayerSettings scriptable object. Refactored event naming for Input system. Added walls to the world prefab." />
-    <MESSAGE value="Replaced UnityCallbacksBehaviour with Zenject ITickable system." />
-    <MESSAGE value="Replaced IUnityCallbackBehaviour with Zenject ITickable system." />
-    <MESSAGE value="Minor name refactoring." />
     <MESSAGE value="Added First Person camera system. Added Cinemachine to the project." />
     <MESSAGE value="Replaced Cinematic with Camera usage. Added character movement processing." />
     <MESSAGE value="Moved camera to a separate GameObject." />
@@ -809,7 +827,11 @@
     <MESSAGE value="Fixed errors." />
     <MESSAGE value="Fixed collections modified error." />
     <MESSAGE value="Improved characters animations. Add rotation body animation. Fixed some animations bugs. Added body rotation when moving." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved characters animations. Add rotation body animation. Fixed some animations bugs. Added body rotation when moving." />
+    <MESSAGE value="Fixed Crouching animations." />
+    <MESSAGE value="Changed menu item name." />
+    <MESSAGE value="Fixed wrong grammar." />
+    <MESSAGE value="Fixed wrong camera position when switching modes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed wrong camera position when switching modes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
