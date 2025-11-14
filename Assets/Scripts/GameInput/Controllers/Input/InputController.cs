@@ -15,6 +15,7 @@ namespace GameInput
         private InputAction _jumpAction;
         private InputAction _sprintAction;
         private InputAction _crouchAction;
+        private InputAction _equipmentWheelAction;
 
         public InputController(ITickNotifier tickNotifier, IInputNotifier inputNotifier)
         {
@@ -33,7 +34,7 @@ namespace GameInput
         public override void Dispose()
         {
             base.Dispose();
-            
+
             UnsubscribeFromUpdate();
         }
 
@@ -54,6 +55,7 @@ namespace GameInput
             _jumpAction = InputSystem.actions.FindAction("Jump");
             _sprintAction = InputSystem.actions.FindAction("Sprint");
             _crouchAction = InputSystem.actions.FindAction("Crouch");
+            _equipmentWheelAction = InputSystem.actions.FindAction("Equipment Wheel");
         }
 
         private void CheckActionIsPressed()
@@ -61,14 +63,14 @@ namespace GameInput
             if (_moveAction.IsPressed())
             {
                 var direction = _moveAction.ReadValue<Vector2>();
-                
+
                 _inputNotifier.NotifyMoveIsPressed(direction);
             }
 
             if (_lookAction.IsPressed())
             {
                 var direction = _lookAction.ReadValue<Vector2>();
-                
+
                 _inputNotifier.NotifyLookIsInteracted(direction);
             }
 
@@ -76,15 +78,20 @@ namespace GameInput
             {
                 _inputNotifier.NotifyJumpIsPressed();
             }
-            
+
             if (_sprintAction.IsPressed())
             {
                 _inputNotifier.NotifySprintIsPressed();
             }
-            
+
             if (_crouchAction.IsPressed())
             {
                 _inputNotifier.NotifyCrouchIsPressed();
+            }
+
+            if (_equipmentWheelAction.IsPressed())
+            {
+                _inputNotifier.NotifyEquipmentWheelIsPressed();
             }
         }
     }

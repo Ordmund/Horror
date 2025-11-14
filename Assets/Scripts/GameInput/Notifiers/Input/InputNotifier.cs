@@ -10,6 +10,7 @@ namespace GameInput
         public event Action JumpIsPressed;
         public event Action SprintIsPressed;
         public event Action CrouchIsPressed;
+        public event Action EquipmentWheelIsPressed;
 
         public void NotifyLookIsInteracted(Vector2 direction)
         {
@@ -34,6 +35,11 @@ namespace GameInput
         public void NotifyCrouchIsPressed()
         {
             CrouchIsPressed?.Invoke();
+        }
+
+        public void NotifyEquipmentWheelIsPressed()
+        {
+            EquipmentWheelIsPressed?.Invoke();
         }
     }
 }

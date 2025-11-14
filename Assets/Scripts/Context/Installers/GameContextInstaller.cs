@@ -1,4 +1,5 @@
 using Camera;
+using Inventory;
 using GameInput;
 using GameStates;
 using Player;
@@ -28,6 +29,7 @@ namespace Context
             WorldInstaller.Install(Container);
             PlayerInstaller.Install(Container);
             CameraInstaller.Install(Container);
+            InventoryInstaller.Install(Container);
         }
     }
 }
