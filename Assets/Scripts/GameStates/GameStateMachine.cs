@@ -6,15 +6,15 @@ namespace GameStates
 {
     public class GameStateMachine : IGameStateMachine
     {
-        private readonly IFactory<LoadingTask> _loadingTaskFactory;
+        private readonly IFactory<LoadingStateTask> _loadingStateTaskFactory;
 
         public event Action<GameState> OnGameStateChanged;
 
-        public GameStateMachine(IFactory<LoadingTask> loadingTaskFactory)
+        public GameStateMachine(IFactory<LoadingStateTask> loadingStateTaskFactory)
         {
-            _loadingTaskFactory = loadingTaskFactory;
+            _loadingStateTaskFactory = loadingStateTaskFactory;
         }
-        
+
         public GameState CurrentState { get; private set; }
 
         public void ChangeState(GameState state)
@@ -23,7 +23,7 @@ namespace GameStates
             
             switch (state)
             {
-                case GameState.Preloading:
+                case GameState.Launching:
                     throw new NotImplementedException();
                     //TODO Preload assets for menu
                 
@@ -33,6 +33,10 @@ namespace GameStates
                 
                 case GameState.Loading:
                     RunLoadingState();
+                    break;
+                
+                case GameState.Reloading:
+                    RunReloadingState();
                     break;
                 
                 case GameState.Game:
@@ -45,9 +49,14 @@ namespace GameStates
 
         private void RunLoadingState()
         {
-            var loadingTask = _loadingTaskFactory.Create();
+            var loadingTask = _loadingStateTaskFactory.Create();
 
             loadingTask.OnComplete(SwitchToGameState).RunAndForget();
+        }
+
+        private void RunReloadingState()
+        {
+            SwitchToGameState();
         }
 
         private void RunGameState()

@@ -8,7 +8,7 @@ namespace GameStates
         {
             Container.Bind<IGameStateMachine>().To<GameStateMachine>().AsSingle();
             
-            Container.BindIFactory<LoadingTask>().AsSingle();
+            Container.BindIFactory<LoadingStateTask>().AsSingle();
         }
     }
 }

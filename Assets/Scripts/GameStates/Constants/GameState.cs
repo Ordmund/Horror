@@ -3,9 +3,10 @@ namespace GameStates
     public enum GameState
     {
         Default,
-        Preloading,
+        Launching,
         Menu,
         Loading,
+        Reloading,
         Game
     }
 }
