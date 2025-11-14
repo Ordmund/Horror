@@ -46,13 +46,12 @@ MonoBehaviour:
     - Player
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a1532a735584e2247998d54512e8a01a
-    m_Address: Assets/Prefabs/Addressables/Equipment/Flashlight/Flashlight.prefab
+    m_Address: Assets/Prefabs/Addressables/Items/Equipment/Flashlight/Flashlight.prefab
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Equipment
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b5b46e043166a3442930cf30da4231f1
-    m_Address: Assets/Prefabs/Addressables/World/Terrain.prefab
+    m_Address: Assets/Prefabs/Addressables/World/World.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - World

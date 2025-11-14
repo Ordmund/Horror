@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 687effb1a9aeb4247a246d8c63e10aa2
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 1ec997f2c40ea51056b21e68f7195533
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -104,6 +104,7 @@ MonoBehaviour:
     - Camera
     - Cheats
     - Equipment
+    - Items
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 1cf5f7607418bc24093bdbc9563ae8e9, type: 2}
